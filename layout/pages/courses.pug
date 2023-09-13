@@ -1,0 +1,162 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    include ../styles
+    title Document
+  body
+  header
+    .header__wrapper
+      .container
+        include ../header   
+  main
+    section.courses.filter
+      .container
+        h3.courses__subtitle.subtitle Enjoy your studying!
+        h2.courses__title.title Our online courses
+        .filter__wrapper
+          .filter__easy
+            ul
+              li.filter__info(data-subject='all')
+                | All
+
+              li.filter__info(data-subject='marketing')
+                | Marketing
+
+              li.filter__info(data-subject='management')
+                | Management
+
+              li.filter__info(data-subject='hr')
+                | HR &amp; Recruting
+
+              li.filter__info(data-subject='design')
+                | Design
+
+              li.filter__info(data-subject='development')
+                | Development
+
+          .search 
+            input(type="text" placeholder='Search course...')
+            svg(xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewbox='0 0 16 16' fill='none')
+              g(clip-path='url(#clip0_32160_786)')
+                path(fill-rule='evenodd' clip-rule='evenodd' d='M7.25016 2.16634C4.44272 2.16634 2.16683 4.44223 2.16683 7.24967C2.16683 10.0571 4.44272 12.333 7.25016 12.333C8.65276 12.333 9.92161 11.7658 10.842 10.8467C11.7642 9.92589 12.3335 8.6549 12.3335 7.24967C12.3335 4.44223 10.0576 2.16634 7.25016 2.16634ZM0.833496 7.24967C0.833496 3.70585 3.70634 0.833008 7.25016 0.833008C10.794 0.833008 13.6668 3.70585 13.6668 7.24967C13.6668 8.78248 13.1287 10.1905 12.2321 11.2939L14.9711 14.0278C15.2317 14.2879 15.2321 14.7101 14.972 14.9706C14.7119 15.2312 14.2898 15.2316 14.0292 14.9715L11.2888 12.2362C10.1863 13.13 8.78039 13.6663 7.25016 13.6663C3.70634 13.6663 0.833496 10.7935 0.833496 7.24967Z' fill='#9A9CA5')
+              defs
+                clippath#clip0_32160_786
+                  rect(width='16' height='16' fill='white')
+
+        .courses__grid.three
+          a.courses__element
+            .courses__img
+              img(src='../img/courses/allcourses.jpg' alt='img')
+            .courses__info
+              .courses__subject.marketing Marketing
+              .courses__title The Ultimate Google Ads Training Course
+              .courses__about
+                .courses__price $100
+                span |
+                .courses__author  by Jerome Bell
+          a.courses__element
+            .courses__img
+              img(src='../img/courses/allcourses.jpg' alt='img')
+            .courses__info
+              .courses__subject.management Management
+              .courses__title Prduct Management Fundamentals
+              .courses__about
+                .courses__price $480
+                span |
+                .courses__author  by Marvin McKinney
+          a.courses__element
+            .courses__img
+              img(src='../img/courses/allcourses.jpg' alt='img')
+            .courses__info
+              .courses__subject.hr HR &amp; Recruting
+              .courses__title The Ultimate Google Ads Training Course
+              .courses__about
+                .courses__price $100
+                span |
+                .courses__author by Jerome Bell
+          a.courses__element
+            .courses__img
+              img(src='../img/courses/allcourses.jpg' alt='img')
+            .courses__info
+              .courses__subject.marketing Marketing
+              .courses__title The Ultimate Google Ads Training Course
+              .courses__about
+                .courses__price $100
+                span |
+                .courses__author  by Jerome Bell
+          a.courses__element
+            .courses__img
+              img(src='../img/courses/allcourses.jpg' alt='img')
+            .courses__info
+              .courses__subject.management Management
+              .courses__title Prduct Management Fundamentals
+              .courses__about
+                .courses__price $480
+                span |
+                .courses__author  by Marvin McKinney
+          a.courses__element
+            .courses__img
+              img(src='../img/courses/allcourses.jpg' alt='img')
+            .courses__info
+              .courses__subject.hr HR &amp; Recruting
+              .courses__title The Ultimate Google Ads Training Course
+              .courses__about
+                .courses__price $100
+                span |
+                .courses__author by Jerome Bell
+          a.courses__element
+            .courses__img
+              img(src='../img/courses/allcourses.jpg' alt='img')
+            .courses__info
+              .courses__subject.marketing Marketing
+              .courses__title The Ultimate Google Ads Training Course
+              .courses__about
+                .courses__price $100
+                span |
+                .courses__author  by Jerome Bell
+          a.courses__element
+            .courses__img
+              img(src='../img/courses/allcourses.jpg' alt='img')
+            .courses__info
+              .courses__subject.management Management
+              .courses__title The Ultimate Google Ads Training Course
+              .courses__about
+                .courses__price $100
+                span |
+                .courses__author  by Jerome Bell
+          a.courses__element
+            .courses__img
+              img(src='../img/courses/allcourses.jpg' alt='img')
+            .courses__info
+              .courses__subject.design Design
+              .courses__title The Ultimate Google Ads Training Course
+              .courses__about
+                .courses__price $100
+                span |
+                .courses__author by Jerome Bell
+    include ../sliderComments
+    section.certificate.up   
+      .container  
+        .text-img
+          .certificate__info 
+            h3.certificate__subtitle.subtitle CREATEX CERTIFICATE
+            h2.certificate__title.title Your expertise will be confirmed
+            .certificate__text We are accredited by international professional organizations and institutes:
+            .certificate__institutes
+              img.institute(src="../img/certificate/DelMarStrategy.svg" alt="")
+              img.institute(src="../img/certificate/NationalHealth.svg" alt="")
+              img.institute(src="../img/certificate/SentinalConsulting.svg" alt="")
+          .certificate__img 
+            img(src="../img/certificate/certificate.jpg" alt="")
+    include ../subscribe
+      h3.subscribe__subtitle.subtitle Don’t miss anything
+      h2.subscribe__title.title Subscribe to the Createx School announcements
+      form.subscribe__cta(action="")
+        input(type="email" placeholder='Your working email') 
+        button.btn Subscribe 
+  footer
+    include ../footer
+  include ../js
+
