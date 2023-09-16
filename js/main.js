@@ -62,8 +62,10 @@ const ourEvents = document.querySelector('.our-events')
 const PagScroll = 180;
 const goTopScroll = 0;
 const goTop = document.querySelector('.go__top')
+if (selectNumber) {
+    selectNumber.addEventListener('change', makePagination)
+}
 
-selectNumber.addEventListener('change', makePagination)
 flexChangeBtn.forEach(btn => btn.addEventListener('click', changeFlexToGrid))
 function hideElement(value) {
     selectedElements.forEach(element => {
