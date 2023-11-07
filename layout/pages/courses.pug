@@ -5,6 +5,7 @@ html(lang='en')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
     include ../styles
     title Document
+    a.courses__grid.three(href='about-ceatex__link.btn')  
   body
   header
     .header__wrapper
@@ -37,7 +38,7 @@ html(lang='en')
                 | Development
 
           .search 
-            input(type="text" placeholder='Search course...')
+            input(type="text" id='searchCourse' placeholder='Search course...')
             svg(xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewbox='0 0 16 16' fill='none')
               g(clip-path='url(#clip0_32160_786)')
                 path(fill-rule='evenodd' clip-rule='evenodd' d='M7.25016 2.16634C4.44272 2.16634 2.16683 4.44223 2.16683 7.24967C2.16683 10.0571 4.44272 12.333 7.25016 12.333C8.65276 12.333 9.92161 11.7658 10.842 10.8467C11.7642 9.92589 12.3335 8.6549 12.3335 7.24967C12.3335 4.44223 10.0576 2.16634 7.25016 2.16634ZM0.833496 7.24967C0.833496 3.70585 3.70634 0.833008 7.25016 0.833008C10.794 0.833008 13.6668 3.70585 13.6668 7.24967C13.6668 8.78248 13.1287 10.1905 12.2321 11.2939L14.9711 14.0278C15.2317 14.2879 15.2321 14.7101 14.972 14.9706C14.7119 15.2312 14.2898 15.2316 14.0292 14.9715L11.2888 12.2362C10.1863 13.13 8.78039 13.6663 7.25016 13.6663C3.70634 13.6663 0.833496 10.7935 0.833496 7.24967Z' fill='#9A9CA5')
@@ -46,7 +47,7 @@ html(lang='en')
                   rect(width='16' height='16' fill='white')
 
         .courses__grid.three
-          a.courses__element
+          a.courses__element(href='./singleCourse.html')
             .courses__img
               img(src='../img/courses/allcourses.jpg' alt='img')
             .courses__info
@@ -56,67 +57,7 @@ html(lang='en')
                 .courses__price $100
                 span |
                 .courses__author  by Jerome Bell
-          a.courses__element
-            .courses__img
-              img(src='../img/courses/allcourses.jpg' alt='img')
-            .courses__info
-              .courses__subject.management Management
-              .courses__title Prduct Management Fundamentals
-              .courses__about
-                .courses__price $480
-                span |
-                .courses__author  by Marvin McKinney
-          a.courses__element
-            .courses__img
-              img(src='../img/courses/allcourses.jpg' alt='img')
-            .courses__info
-              .courses__subject.hr HR &amp; Recruting
-              .courses__title The Ultimate Google Ads Training Course
-              .courses__about
-                .courses__price $100
-                span |
-                .courses__author by Jerome Bell
-          a.courses__element
-            .courses__img
-              img(src='../img/courses/allcourses.jpg' alt='img')
-            .courses__info
-              .courses__subject.marketing Marketing
-              .courses__title The Ultimate Google Ads Training Course
-              .courses__about
-                .courses__price $100
-                span |
-                .courses__author  by Jerome Bell
-          a.courses__element
-            .courses__img
-              img(src='../img/courses/allcourses.jpg' alt='img')
-            .courses__info
-              .courses__subject.management Management
-              .courses__title Prduct Management Fundamentals
-              .courses__about
-                .courses__price $480
-                span |
-                .courses__author  by Marvin McKinney
-          a.courses__element
-            .courses__img
-              img(src='../img/courses/allcourses.jpg' alt='img')
-            .courses__info
-              .courses__subject.hr HR &amp; Recruting
-              .courses__title The Ultimate Google Ads Training Course
-              .courses__about
-                .courses__price $100
-                span |
-                .courses__author by Jerome Bell
-          a.courses__element
-            .courses__img
-              img(src='../img/courses/allcourses.jpg' alt='img')
-            .courses__info
-              .courses__subject.marketing Marketing
-              .courses__title The Ultimate Google Ads Training Course
-              .courses__about
-                .courses__price $100
-                span |
-                .courses__author  by Jerome Bell
-          a.courses__element
+          a.courses__element(href='./singleCourse.html')
             .courses__img
               img(src='../img/courses/allcourses.jpg' alt='img')
             .courses__info
@@ -126,7 +67,7 @@ html(lang='en')
                 .courses__price $100
                 span |
                 .courses__author  by Jerome Bell
-          a.courses__element
+          a.courses__element(href='./singleCourse.html')
             .courses__img
               img(src='../img/courses/allcourses.jpg' alt='img')
             .courses__info
@@ -136,6 +77,71 @@ html(lang='en')
                 .courses__price $100
                 span |
                 .courses__author by Jerome Bell
+
+          a.courses__element(href='./singleCourse.html')
+            .courses__img
+              img(src='../img/courses/allcourses.jpg' alt='img')
+            .courses__info
+              .courses__subject.marketing Marketing
+              .courses__title The Ultimate Google Ads Training Course
+              .courses__about
+                .courses__price $100
+                span |
+                .courses__author  by Jerome Bell
+          a.courses__element(href='./singleCourse.html')
+            .courses__img
+              img(src='../img/courses/allcourses.jpg' alt='img')
+            .courses__info
+              .courses__subject.management Management
+              .courses__title Product Management Fundamentals
+              .courses__about
+                .courses__price $480
+                span |
+                .courses__author  by Marvin McKinney
+          a.courses__element(href='./singleCourse.html')
+            .courses__img
+              img(src='../img/courses/allcourses.jpg' alt='img')
+            .courses__info
+              .courses__subject.hr HR &amp; Recruting
+              .courses__title The Ultimate Google Ads Training Course
+              .courses__about
+                .courses__price $100
+                span |
+                .courses__author by Jerome Bell
+
+          a.courses__element(href='./singleCourse.html')
+            .courses__img
+              img(src='../img/courses/allcourses.jpg' alt='img')
+            .courses__info
+              .courses__subject.marketing Marketing
+              .courses__title The Ultimate Google Ads Training Course
+              .courses__about
+                .courses__price $100
+                span |
+                .courses__author  by Jerome Bell
+          a.courses__element(href='./singleCourse.html')
+            .courses__img
+              img(src='../img/courses/allcourses.jpg' alt='img')
+            .courses__info
+              .courses__subject.management Management
+              .courses__title The Ultimate Google Ads Training Course
+              .courses__about
+                .courses__price $100
+                span |
+                .courses__author  by Jerome Bell
+          a.courses__element(href='./singleCourse.html')
+            .courses__img
+              img(src='../img/courses/allcourses.jpg' alt='img')
+            .courses__info
+              .courses__subject.design Design
+              .courses__title The Ultimate Google Ads Training Course
+              .courses__about
+                .courses__price $100
+                span |
+                .courses__author by Jerome Bell
+
+        .btn__wrapper
+          #load-more  load more 
     include ../sliderComments
     section.certificate.up   
       .container  
@@ -150,12 +156,12 @@ html(lang='en')
               img.institute(src="../img/certificate/SentinalConsulting.svg" alt="")
           .certificate__img 
             img(src="../img/certificate/certificate.jpg" alt="")
-    include ../subscribe
-      h3.subscribe__subtitle.subtitle Don’t miss anything
-      h2.subscribe__title.title Subscribe to the Createx School announcements
-      form.subscribe__cta(action="")
-        input(type="email" placeholder='Your working email') 
-        button.btn Subscribe 
+  include ../subscribe
+    //- h3.subscribe__subtitle.subtitle Don’t miss anything
+    //- h2.subscribe__title.title Subscribe to the Createx School announcements
+    //- form.subscribe__cta(action="")
+    //-   input(type="email" placeholder='Your working email') 
+    //-   button.btn Subscribe 
   footer
     include ../footer
   include ../js

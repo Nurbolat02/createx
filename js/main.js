@@ -14,6 +14,21 @@ $(document).ready(function () {
     });
 });
 $(document).ready(function () {
+    $('.slider__three').slick({
+        slidesToShow: 3,
+        arrows: true,
+        prevArrow: `<button type="button" class="slick-prev"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.20711 17.2071C8.81658 17.5976 8.18342 17.5976 7.79289 17.2071L3.29289 12.7071C2.90237 12.3166 2.90237 11.6834 3.29289 11.2929L7.79289 6.79289C8.18342 6.40237 8.81658 6.40237 9.20711 6.79289C9.59763 7.18342 9.59763 7.81658 9.20711 8.20711L6.41421 11L20 11C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13L6.41421 13L9.20711 15.7929C9.59763 16.1834 9.59763 16.8166 9.20711 17.2071Z" fill="none"/>
+        </svg>
+        </button>`,
+        nextArrow: `<button type="button" class="slick-next"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7929 6.79289C15.1834 6.40237 15.8166 6.40237 16.2071 6.79289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L16.2071 17.2071C15.8166 17.5976 15.1834 17.5976 14.7929 17.2071C14.4024 16.8166 14.4024 16.1834 14.7929 15.7929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L14.7929 8.20711C14.4024 7.81658 14.4024 7.18342 14.7929 6.79289Z" fill="none"/>
+        </svg>
+        </button>`
+
+    });
+});
+$(document).ready(function () {
     $('.slider__tutors').slick({
         slidesToShow: 4,
         arrows: true,
@@ -43,7 +58,10 @@ $(document).ready(function () {
 
     });
 });
+const justChek = document.querySelector('.blog__elements button.btn')
+const justChekElements = document.querySelectorAll('.blog__elements .grid .grid__element')
 
+const blogFilter = document.querySelectorAll('.our-blog__form .filter__easy ul li')
 const selectThemes = document.querySelector('#themes')
 const selectNumber = document.querySelector('#themes2')
 const selectedElements = document.querySelectorAll('.event__subtitle')
@@ -62,13 +80,32 @@ const ourEvents = document.querySelector('.our-events')
 const PagScroll = 180;
 const goTopScroll = 0;
 const goTop = document.querySelector('.go__top')
+
+// justChek.addEventListener('click', function (event) {
+//     let justArray = Array.from(justChekElements);
+//     justArray.forEach(function (element, index) {
+//         if (index % 2 == 0) {
+//             element.classList.add("just__chek");
+//         }
+//     })
+
+// })
+
+blogFilter.forEach(blogFilterElement => blogFilterElement.addEventListener('click', event => blogFilterChangeColor(event)))
+function blogFilterChangeColor(event) {
+    blogFilter.forEach(x => x.classList.remove('filter__collor'))
+    event.target.classList.add('filter__collor')
+}
 if (selectNumber) {
     selectNumber.addEventListener('change', makePagination)
 }
 
+
 flexChangeBtn.forEach(btn => btn.addEventListener('click', changeFlexToGrid))
 function hideElement(value) {
     selectedElements.forEach(element => {
+        // console.log('Показываю значение записаное в тайтле:' + element.innerHTML)
+        // console.log('Показываю значение которое выйбрал пользователь:' + value)
         element.closest('.event__item').classList.add('hidden')
         if (value == 'All events') {
             element.closest('.event__item').classList.remove('hidden')
@@ -81,11 +118,13 @@ function hideElement(value) {
 }
 if (selectThemes) {
     selectThemes.addEventListener('change', showValue)
-    function showValue() {
-        let value = selectThemes.value
-        hideElement(value)
-    }
 }
+
+function showValue() {
+    let value = selectThemes.value
+    hideElement(value)
+}
+
 
 
 let arr = []
@@ -220,7 +259,9 @@ function collorBtn(event) {
     tabBtns.forEach(btn => btn.classList.remove('tabs__btn_active'))
     event.target.classList.add('tabs__btn_active')
     let arrayWithUndefined = Array.from(tabBtns).map((element, index) => showTab(element, index));
+    // console.log(arrayWithUndefined)
     let filteredArray = arrayWithUndefined.filter(item => item !== undefined);
+    // console.log(filteredArray)
     tabContentItems.forEach(tabContentItem => tabContentItem.classList.remove('tabs__pane_show'))
     tabContentItems[filteredArray[0]].classList.add('tabs__pane_show')
 }
@@ -285,30 +326,38 @@ if (timerElement !== null) {
 
 
 if (document.querySelector(".accordion__heading") !== null) {
+    // если при попытке найти элемент с классом accordion__heading
+    //  мы находим значение отличное от нуля
+    // если получаем ноль, то значит такого элемента на странице нет
     const acc = document.getElementsByClassName("accordion__heading");
-
+    //  находим все элементы с классорм accordion__heading
 
     for (let i = 0; i < acc.length; i++) {
         acc[i].addEventListener("click", function () {
+
             if (!this.classList.contains("active")) {
+
                 // я ведь могу заменить this на event.target, да?
                 // разница между this и event?
                 closeAccTabs();
                 toggleAcc(this);
-            } else {
-                closeAccTabs();
             }
         });
     }
 
 
 
-    function toggleAcc(e) {
-        e.classList.toggle("active");
-        var panel = e.nextElementSibling;
+    function toggleAcc(x) {
+        x.classList.toggle("active");
+        var panel = x.nextElementSibling;
+
         if (panel.style.maxHeight) {
+            // если высота отлична от нуля
+            // то мы обнуляем ее чтобы контент исчез
             panel.style.maxHeight = null;
         } else {
+            // в случае если высота равна нулю
+            // мы сами добавим необходимую высоту
             panel.style.maxHeight = panel.scrollHeight + "px";
         }
     }
@@ -331,19 +380,28 @@ const listItems = document.querySelectorAll(".our-events .events__list .event__i
 const nextButton = document.getElementById("next-button");
 const prevButton = document.getElementById("prev-button");
 function makePagination() {
-    console.log('I work')
-    let numberOfPages = selectNumber.value
-    let paginationLimit = numberOfPages;
+    let numberOfPages, paginationLimit
+    if (selectNumber) {
+        numberOfPages = selectNumber.value
+        paginationLimit = numberOfPages;
+    }
+
     const pageCount = Math.ceil(listItems.length / paginationLimit);
     let currentPage = 1;
     const disableButton = (button) => {
-        button.classList.add("disabled");
-        button.setAttribute("disabled", true);
+        if (button) {
+            button.classList.add("disabled");
+            button.setAttribute("disabled", true);
+        }
+
     };
 
     const enableButton = (button) => {
-        button.classList.remove("disabled");
-        button.removeAttribute("disabled");
+        if (button) {
+            button.classList.remove("disabled");
+            button.removeAttribute("disabled");
+        }
+
     };
 
     const handlePageButtonsStatus = () => {
@@ -400,17 +458,25 @@ function makePagination() {
             }
         });
     };
-    paginationNumbers.innerHTML = '';
+    if (paginationNumbers) {
+        paginationNumbers.innerHTML = '';
+    }
+
     getPaginationNumbers();
     setCurrentPage(1);
 
-    prevButton.addEventListener("click", () => {
-        setCurrentPage(currentPage - 1);
-    });
+    if (prevButton) {
+        prevButton.addEventListener("click", () => {
+            setCurrentPage(currentPage - 1);
+        });
+    }
 
-    nextButton.addEventListener("click", () => {
-        setCurrentPage(currentPage + 1);
-    });
+    if (nextButton) {
+        nextButton.addEventListener("click", () => {
+            setCurrentPage(currentPage + 1);
+        });
+    }
+
 
     document.querySelectorAll(".pagination-number").forEach((button) => {
         const pageIndex = Number(button.getAttribute("page-index"));
@@ -437,19 +503,146 @@ makePagination()
 
 
 function scrollToTop(x) {
-    const scrollDuration = 100; // Продолжительность анимации в миллисекундах
-    const scrollStep = -window.scrollY / (scrollDuration); // Вычисляем шаг прокрутки
+    const scrollDuration = 50; // Продолжительность анимации 
+    const scrollStep = -window.scrollY / (scrollDuration); // Вычисляем шаг 
     let scrollInterval;
 
     function scrollStepFunction() {
         if (window.scrollY > x) {
-            window.scrollBy(0, scrollStep); // Прокручиваем страницу на шаг
+            window.scrollBy(0, scrollStep); // Прокручиваем страницу 
         } else {
-            clearInterval(scrollInterval); // Останавливаем анимацию, когда достигнут верх страницы
+            clearInterval(scrollInterval); // Останавливаем анимацию
         }
     }
 
-    scrollInterval = setInterval(scrollStepFunction, 10); // Устанавливаем интервал для шагов анимации
+    scrollInterval = setInterval(scrollStepFunction, 10); // интервал для шагов анимации
 }
 
 // Добавляем обработчик события для элемента (например, кнопки), по которому будет вызываться функция scrollToTop
+
+/* Разбираемся с плавной фильраций */
+var $listing = $('.blog__elements .grid')
+$listing.isotope({
+    itemSelector: '.grid__element',
+    layoutMode: 'fitRows',
+    // getSortData: {
+    //     category: '[data-category]'
+    // }
+});
+$("select#category").on("click", function () {
+    var filterValue = $(this).val();
+    console.log(filterValue)
+    $listing.isotope({ filter: filterValue });
+});
+
+$("select#category").on("change", "option", function () {
+    var filterValue = $(this).val();
+    console.log(filterValue)
+    $listing.isotope({ filter: filterValue });
+});
+$(".filter__easy ul").on("click", "li", function () {
+    var filterValue = $(this).attr('data-filter');
+    $listing.isotope({ filter: filterValue });
+});
+// $(".filter__easy ul").on("click", "li", function () {
+//     let sortValue = $(this).attr('data-subject');
+//     $listing.isotope({ sortBy: sortValue })
+//     console.log(sortValue);
+// });
+
+// не работает потому что бибилиотека добавляет
+// все автоматически абсолютное позиционирование
+
+// let inputEvent = document.querySelector('#searchEvent');
+// inputEvent.oninput = function () {
+//     let val = this.value.trim()
+//     let elements = document.querySelectorAll('.event__item .event__info a.event__title')
+//     if (val != '') {
+
+//         elements.forEach(function (elem) {
+//             if (elem.innerText.search(val) == -1) {
+//                 console.log(val)
+//                 console.log(elem.innerText)
+//                 elem.closest('.event__item').classList.add('hidden')
+//             }
+//             else {
+//                 elem.closest('.event__item').classList.remove('hidden')
+//             }
+//         })
+//     }
+//     else {
+//         elements.forEach(function (elem) {
+//             elem.closest('.event__item').classList.remove('hidden')
+//         });
+//     }
+// }
+// let inputEvent = document.querySelector('#searchCourse');
+// inputEvent.oninput = function () {
+//     let val = this.value.trim()
+//     let elements = document.querySelectorAll('.courses__grid.three a.courses__element .courses__title')
+//     if (val != '') {
+
+//         elements.forEach(function (elem) {
+//             if (elem.innerText.search(val) == -1) {
+//                 console.log(val)
+//                 console.log(elem.innerText)
+//                 elem.closest('.courses__element').classList.add('hidden')
+//             }
+//             else {
+//                 elem.closest('.courses__element').classList.remove('hidden')
+//             }
+//         })
+//     }
+//     else {
+//         elements.forEach(function (elem) {
+//             elem.closest('.courses__element').classList.remove('hidden')
+//         });
+//     }
+// }
+
+// Функция для фильтрации элементов
+function filterElements(inputSelector, elementsSelector, elemParent) {
+    console.log(inputSelector)
+    const input = document.querySelector(inputSelector);
+    const elements = document.querySelectorAll(elementsSelector);
+
+    input.oninput = function () {
+        const val = this.value.trim();
+
+        elements.forEach(function (elem) {
+            const text = elem.innerText;
+            const parent = elem.closest(elemParent);
+            if (val === '' || text.includes(val)) {
+                parent.classList.remove('hidden');
+            } else {
+                parent.classList.add('hidden');
+            }
+        });
+    };
+}
+
+// Вызывайте функцию для фильтрации с нужными селекторами
+if (document.querySelector('#searchEvent')) {
+    filterElements('#searchEvent', '.event__item .event__info a.event__title', '.event__item');
+}
+if (document.querySelector('#searchCourse')) {
+    filterElements('#searchCourse', '.courses__grid.three a.courses__element .courses__title', '.courses__element');
+
+}
+
+let loadMoreBtn = document.querySelector('#load-more');
+let currentItem = 3;
+let boxes = document.querySelectorAll('.courses__grid.three .courses__element');
+// boxes.forEach(elem => elem.classList.add('hidden'))
+loadMoreBtn.onclick = () => {
+    boxes
+    for (var i = currentItem; i < currentItem + 3; i++) {
+        console.log(boxes)
+        boxes[i].style.display = 'block';
+    }
+    currentItem += 3;
+
+    if (currentItem >= boxes.length) {
+        loadMoreBtn.style.display = 'none';
+    }
+}

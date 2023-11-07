@@ -1,0 +1,248 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    include ../styles
+
+    title multipage site
+  body
+    header
+      .header__wrapper
+        .container
+          include ../header
+    main
+      section.blog-info_section
+        .container
+          .blog-info__header 
+            .blog-info__descr
+              .blog__type
+                span.article Аrticle 
+                | |
+              .blog-info__topic HR & Recruting
+            .search 
+              input(type="text" id='searchCourse' placeholder='Search course...')
+              svg(xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewbox='0 0 16 16' fill='none')
+                g(clip-path='url(#clip0_32160_786)')
+                  path(fill-rule='evenodd' clip-rule='evenodd' d='M7.25016 2.16634C4.44272 2.16634 2.16683 4.44223 2.16683 7.24967C2.16683 10.0571 4.44272 12.333 7.25016 12.333C8.65276 12.333 9.92161 11.7658 10.842 10.8467C11.7642 9.92589 12.3335 8.6549 12.3335 7.24967C12.3335 4.44223 10.0576 2.16634 7.25016 2.16634ZM0.833496 7.24967C0.833496 3.70585 3.70634 0.833008 7.25016 0.833008C10.794 0.833008 13.6668 3.70585 13.6668 7.24967C13.6668 8.78248 13.1287 10.1905 12.2321 11.2939L14.9711 14.0278C15.2317 14.2879 15.2321 14.7101 14.972 14.9706C14.7119 15.2312 14.2898 15.2316 14.0292 14.9715L11.2888 12.2362C10.1863 13.13 8.78039 13.6663 7.25016 13.6663C3.70634 13.6663 0.833496 10.7935 0.833496 7.24967Z' fill='#9A9CA5')
+                defs
+                  clippath#clip0_32160_786
+                    rect(width='16' height='16' fill='white')
+          .blog-info__container
+            .blog-info__article
+              h2.blog-article__title HR statistics: job search, interviews, hiring and recruiting
+              h3.blog-article__subtitle 
+                .blog__info
+                  .blog__date September 4, 2020
+                  span | 
+                  .blog__time  36 min
+                .blog__share  
+                  | Share:
+                  ul.tutor-bio__contacts
+                    li
+                      a.tutor-bio__contact(href="") 
+                        svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none')
+                          path(d='M17.5628 1.00458L14.7856 1C11.6654 1 9.64903 3.12509 9.64903 6.41423V8.91055H6.85662C6.61532 8.91055 6.41992 9.1115 6.41992 9.35937V12.9763C6.41992 13.2241 6.61554 13.4249 6.85662 13.4249H9.64903V22.5514C9.64903 22.7993 9.84443 23 10.0857 23H13.729C13.9703 23 14.1657 22.799 14.1657 22.5514V13.4249H17.4307C17.672 13.4249 17.8674 13.2241 17.8674 12.9763L17.8688 9.35937C17.8688 9.24036 17.8226 9.12638 17.7409 9.04215C17.6591 8.95793 17.5477 8.91055 17.4318 8.91055H14.1657V6.79439C14.1657 5.77728 14.4017 5.26094 15.6915 5.26094L17.5624 5.26025C17.8035 5.26025 17.9989 5.0593 17.9989 4.81166V1.45317C17.9989 1.20576 17.8037 1.00504 17.5628 1.00458Z' fill='#787A80')
+
+
+                    li
+                      a.tutor-bio__contact(href="") 
+                        svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none')
+                          path(d='M22.5 5.77233C21.7271 6.10027 20.8978 6.32267 20.0264 6.42196C20.9161 5.91181 21.5972 5.10263 21.92 4.1414C21.0854 4.61383 20.1642 4.95688 19.1826 5.14285C18.3966 4.33994 17.2785 3.83984 16.0384 3.83984C13.6593 3.83984 11.7303 5.68691 11.7303 7.9637C11.7303 8.2866 11.7683 8.60199 11.8418 8.90357C8.26201 8.73141 5.08768 7.08917 2.96314 4.59372C2.59176 5.20189 2.38049 5.91053 2.38049 6.66697C2.38049 8.09814 3.14161 9.36093 4.2964 10.0997C3.5904 10.0771 2.92639 9.89116 2.34508 9.58205V9.63357C2.34508 11.6314 3.83056 13.2988 5.80024 13.6783C5.43936 13.7713 5.05882 13.8228 4.66514 13.8228C4.38696 13.8228 4.11794 13.7964 3.85417 13.7461C4.40267 15.3859 5.99315 16.5783 7.87756 16.611C6.40388 17.7167 4.54573 18.3739 2.52749 18.3739C2.17976 18.3739 1.83724 18.3537 1.5 18.3173C3.40671 19.4896 5.67036 20.1732 8.10327 20.1732C16.028 20.1732 20.3597 13.8881 20.3597 8.43741L20.3453 7.90341C21.1917 7.32537 21.9239 6.59912 22.5 5.77233Z' fill='#787A80')
+
+                    li
+                      a.tutor-bio__contact(href="")  
+                        svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none')
+                          path(d='M21.995 22L22 21.9992V14.6642C22 11.0758 21.2275 8.31167 17.0325 8.31167C15.0158 8.31167 13.6625 9.41833 13.11 10.4675H13.0517V8.64667H9.07416V21.9992H13.2158V15.3875C13.2158 13.6467 13.5458 11.9633 15.7017 11.9633C17.8258 11.9633 17.8575 13.95 17.8575 15.4992V22H21.995Z' fill='#FF3F3A')
+                          path(d='M2.32999 8.6475H6.47666V22H2.32999V8.6475Z' fill='#FF3F3A')
+                          path(d='M4.40167 2C3.07583 2 2 3.07583 2 4.40167C2 5.7275 3.07583 6.82583 4.40167 6.82583C5.7275 6.82583 6.80333 5.7275 6.80333 4.40167C6.8025 3.07583 5.72667 2 4.40167 2Z' fill='#FF3F3A')
+
+              .blog-article__img 
+                img(src="../img/blog/BIGblog5.jpg" alt="")
+              .blog-article__text 
+                p.article__title Vulputate vitae pellentesque scelerisque luctus consequat mattis pellentesque dui odio. Interdum aenean sit malesuada ornare sed gravida rhoncus, congue. Purus auctor nullam diam quis est hendrerit ac euismod.
+                p.article__text At facilisi sapien posuere eget nunc senectus proin nullam. Tortor senectus in et sagittis, vitae diam cras dignissim. Varius adipiscing eget diam nisi. Orci, consectetur vulputate metus ornare pharetra, neque, fermentum. Vel nec rhoncus, non nunc, neque in massa. Feugiat leo nam nisl lacinia amet, odio. Mi varius viverra risus vel.
+                p.article__text Amet, morbi sed pharetra, elit eget mi potenti. Condimentum orci interdum feugiat lectus libero duis. Nisl massa, elementum varius sit. Nunc felis, porttitor aliquam urna, accumsan et sed. Aliquet non sed duis diam vehicula rhoncus. In dictum nullam tincidunt semper pellentesque purus morbi sed. Ut aliquet velit pharetra, nisi nunc, non.
+                p.comment__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in tot euismod vulputate etiam eros. Vel accumsan at elit neque, ipsum.
+                p.article__text Mauris amet arcu nisl vel dictum tellus. Sed rhoncus, ut sed id ut erat mattis. Vitae mus blandit in neque amet non fringilla blandit:
+                ul.article__ul
+                  li.about-ceatex__element A fermentum in morbi pretium aliquam adipiscing donec tempus.
+                  li.about-ceatex__element Vulputate placerat amet pulvinar lorem nisl.
+                  li.about-ceatex__element Consequat feugiat habitant gravida quisque elit bibendum id adipiscing sed.
+                  li.about-ceatex__element Etiam duis lobortis in fames ultrices commodo nibh.
+                  li.about-ceatex__element Fringilla in nec risus congue venenatis pretium posuere nec.
+                p.article__text  Enim, vel massa odio diam. Blandit massa gravida feugiat elementum id nec sed leo. Nisi in ornare lectus eget. Urna, risus, consectetur volutpat lorem purus. Velit aliquet nibh vitae maecenas. Consectetur neque ut aliquam eros, purus enim dignissim aenean vitae. Ultrices fames augue mattis tortor est justo, pharetra nibh risus. Facilisi at porttitor volutpat natoque proin amet, nulla. Vivamus ut lobortis sagittis curabitur tellus convallis eget netus vitae.
+                .blog-article__subtitle
+
+                  .blog__tags
+                    | Tags:
+                    .blog__tag #learning
+                    .blog__tag #HR
+                    .blog__tag #self-development
+
+                  .blog__share  
+                    | Share:
+                    ul.tutor-bio__contacts
+                      li
+                        a.tutor-bio__contact(href="") 
+                          svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none')
+                            path(d='M17.5628 1.00458L14.7856 1C11.6654 1 9.64903 3.12509 9.64903 6.41423V8.91055H6.85662C6.61532 8.91055 6.41992 9.1115 6.41992 9.35937V12.9763C6.41992 13.2241 6.61554 13.4249 6.85662 13.4249H9.64903V22.5514C9.64903 22.7993 9.84443 23 10.0857 23H13.729C13.9703 23 14.1657 22.799 14.1657 22.5514V13.4249H17.4307C17.672 13.4249 17.8674 13.2241 17.8674 12.9763L17.8688 9.35937C17.8688 9.24036 17.8226 9.12638 17.7409 9.04215C17.6591 8.95793 17.5477 8.91055 17.4318 8.91055H14.1657V6.79439C14.1657 5.77728 14.4017 5.26094 15.6915 5.26094L17.5624 5.26025C17.8035 5.26025 17.9989 5.0593 17.9989 4.81166V1.45317C17.9989 1.20576 17.8037 1.00504 17.5628 1.00458Z' fill='#787A80')
+
+
+                      li
+                        a.tutor-bio__contact(href="") 
+                          svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none')
+                            path(d='M22.5 5.77233C21.7271 6.10027 20.8978 6.32267 20.0264 6.42196C20.9161 5.91181 21.5972 5.10263 21.92 4.1414C21.0854 4.61383 20.1642 4.95688 19.1826 5.14285C18.3966 4.33994 17.2785 3.83984 16.0384 3.83984C13.6593 3.83984 11.7303 5.68691 11.7303 7.9637C11.7303 8.2866 11.7683 8.60199 11.8418 8.90357C8.26201 8.73141 5.08768 7.08917 2.96314 4.59372C2.59176 5.20189 2.38049 5.91053 2.38049 6.66697C2.38049 8.09814 3.14161 9.36093 4.2964 10.0997C3.5904 10.0771 2.92639 9.89116 2.34508 9.58205V9.63357C2.34508 11.6314 3.83056 13.2988 5.80024 13.6783C5.43936 13.7713 5.05882 13.8228 4.66514 13.8228C4.38696 13.8228 4.11794 13.7964 3.85417 13.7461C4.40267 15.3859 5.99315 16.5783 7.87756 16.611C6.40388 17.7167 4.54573 18.3739 2.52749 18.3739C2.17976 18.3739 1.83724 18.3537 1.5 18.3173C3.40671 19.4896 5.67036 20.1732 8.10327 20.1732C16.028 20.1732 20.3597 13.8881 20.3597 8.43741L20.3453 7.90341C21.1917 7.32537 21.9239 6.59912 22.5 5.77233Z' fill='#787A80')
+
+                      li
+                        a.tutor-bio__contact(href="")  
+                          svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none')
+                            path(d='M21.995 22L22 21.9992V14.6642C22 11.0758 21.2275 8.31167 17.0325 8.31167C15.0158 8.31167 13.6625 9.41833 13.11 10.4675H13.0517V8.64667H9.07416V21.9992H13.2158V15.3875C13.2158 13.6467 13.5458 11.9633 15.7017 11.9633C17.8258 11.9633 17.8575 13.95 17.8575 15.4992V22H21.995Z' fill='#FF3F3A')
+                            path(d='M2.32999 8.6475H6.47666V22H2.32999V8.6475Z' fill='#FF3F3A')
+                            path(d='M4.40167 2C3.07583 2 2 3.07583 2 4.40167C2 5.7275 3.07583 6.82583 4.40167 6.82583C5.7275 6.82583 6.80333 5.7275 6.80333 4.40167C6.8025 3.07583 5.72667 2 4.40167 2Z' fill='#FF3F3A')
+
+            .blog-info_.blog-info_additionally  
+              .blog-info__box 
+                .info-box__title Author
+                .text-img
+                  .blog-info__picture
+                    .blog-info__img
+                      img(src="../img/blog/small_blog1.jpg" alt="")
+                  .blog-info__description
+                    .blog-info__name Kristin Watson
+                    .blog-info__work Curator of Marketing Course
+                    .blog-info__socials 
+                      ul.tutor-bio__contacts
+                        li
+                          a.tutor-bio__contact(href="") 
+                            svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none')
+                              path(d='M17.5628 1.00458L14.7856 1C11.6654 1 9.64903 3.12509 9.64903 6.41423V8.91055H6.85662C6.61532 8.91055 6.41992 9.1115 6.41992 9.35937V12.9763C6.41992 13.2241 6.61554 13.4249 6.85662 13.4249H9.64903V22.5514C9.64903 22.7993 9.84443 23 10.0857 23H13.729C13.9703 23 14.1657 22.799 14.1657 22.5514V13.4249H17.4307C17.672 13.4249 17.8674 13.2241 17.8674 12.9763L17.8688 9.35937C17.8688 9.24036 17.8226 9.12638 17.7409 9.04215C17.6591 8.95793 17.5477 8.91055 17.4318 8.91055H14.1657V6.79439C14.1657 5.77728 14.4017 5.26094 15.6915 5.26094L17.5624 5.26025C17.8035 5.26025 17.9989 5.0593 17.9989 4.81166V1.45317C17.9989 1.20576 17.8037 1.00504 17.5628 1.00458Z' fill='#787A80')
+
+
+                        li
+                          a.tutor-bio__contact(href="") 
+                            svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none')
+                              path(d='M22.5 5.77233C21.7271 6.10027 20.8978 6.32267 20.0264 6.42196C20.9161 5.91181 21.5972 5.10263 21.92 4.1414C21.0854 4.61383 20.1642 4.95688 19.1826 5.14285C18.3966 4.33994 17.2785 3.83984 16.0384 3.83984C13.6593 3.83984 11.7303 5.68691 11.7303 7.9637C11.7303 8.2866 11.7683 8.60199 11.8418 8.90357C8.26201 8.73141 5.08768 7.08917 2.96314 4.59372C2.59176 5.20189 2.38049 5.91053 2.38049 6.66697C2.38049 8.09814 3.14161 9.36093 4.2964 10.0997C3.5904 10.0771 2.92639 9.89116 2.34508 9.58205V9.63357C2.34508 11.6314 3.83056 13.2988 5.80024 13.6783C5.43936 13.7713 5.05882 13.8228 4.66514 13.8228C4.38696 13.8228 4.11794 13.7964 3.85417 13.7461C4.40267 15.3859 5.99315 16.5783 7.87756 16.611C6.40388 17.7167 4.54573 18.3739 2.52749 18.3739C2.17976 18.3739 1.83724 18.3537 1.5 18.3173C3.40671 19.4896 5.67036 20.1732 8.10327 20.1732C16.028 20.1732 20.3597 13.8881 20.3597 8.43741L20.3453 7.90341C21.1917 7.32537 21.9239 6.59912 22.5 5.77233Z' fill='#787A80')
+
+                        li
+                          a.tutor-bio__contact(href="")  
+                            svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none')
+                              path(d='M21.995 22L22 21.9992V14.6642C22 11.0758 21.2275 8.31167 17.0325 8.31167C15.0158 8.31167 13.6625 9.41833 13.11 10.4675H13.0517V8.64667H9.07416V21.9992H13.2158V15.3875C13.2158 13.6467 13.5458 11.9633 15.7017 11.9633C17.8258 11.9633 17.8575 13.95 17.8575 15.4992V22H21.995Z' fill='#FF3F3A')
+                              path(d='M2.32999 8.6475H6.47666V22H2.32999V8.6475Z' fill='#FF3F3A')
+                              path(d='M4.40167 2C3.07583 2 2 3.07583 2 4.40167C2 5.7275 3.07583 6.82583 4.40167 6.82583C5.7275 6.82583 6.80333 5.7275 6.80333 4.40167C6.8025 3.07583 5.72667 2 4.40167 2Z' fill='#FF3F3A')
+
+
+              .blog-info__box
+                .info-box__title Trending Articles
+                .text-img
+                  .blog-info__picture
+                    .blog-info__picture
+                      img(src="../img/blog/small_blog2.jpg" alt="")
+                  .blog-info__description
+                    .blog__date.blog-info__work September 4, 2020
+                    .blog-info__name What is traffic arbitrage and does it really make money?
+              .blog-info__box
+                .text-img
+                  .blog-info__picture
+                    .blog-info__picture
+                      img(src="../img/blog/small_blog2.jpg" alt="")
+                  .blog-info__description
+                    .blog__date.blog-info__work September 4, 2020
+                    .blog-info__name What is traffic arbitrage and does it really make money?
+              .blog-info__box
+                .text-img
+                  .blog-info__picture
+                    .blog-info__picture
+                      img(src="../img/blog/small_blog2.jpg" alt="")
+                  .blog-info__description
+                    .blog__date.blog-info__work September 4, 2020
+                    .blog-info__name What is traffic arbitrage and does it really make money?
+
+              .blog-info__tags
+                .info-box__title Tags
+                .blog__tags
+                  .blog__tag #marketing
+                  .blog__tag #recruiting
+                  .blog__tag #coding
+                  .blog__tag #learning
+                  .blog__tag #HR
+                  .blog__tag #self-development
+
+      include ../cta-blog
+      section.check-other 
+        .container 
+          h3.tutors__subtitle.subtitle Check other online events
+          h2.tutors__title.title You may be interested in
+          .slider__three
+            .event__item
+              .grid__element
+              a.blog__img(href="") 
+                .blog__type 
+                  span.article Article
+                img(src="../img/blog/blog3.jpg" alt="")
+              .blog__info 
+                .blog__subject Design
+                span | 
+                .blog__date August 8, 2020
+                span | 
+                .blog__time  15 min
+
+              .blog__title Should you choose a creative profession if you are attracted to creativity?
+              .blog__txt Curabitur nisl tincidunt eros venenatis vestibulum ac placerat. Tortor, viverra sed vulputate ultrices...
+              a.blog__link(href="") Read 
+            .event__item
+              .grid__element
+              a.blog__img(href="") 
+                .blog__type 
+                  span.article Article
+                img(src="../img/blog/blog3.jpg" alt="")
+              .blog__info 
+                .blog__subject Design
+                span | 
+                .blog__date August 8, 2020
+                span | 
+                .blog__time  15 min
+
+              .blog__title Should you choose a creative profession if you are attracted to creativity?
+              .blog__txt Curabitur nisl tincidunt eros venenatis vestibulum ac placerat. Tortor, viverra sed vulputate ultrices...
+              a.blog__link(href="") Read 
+            .event__item
+              .grid__element
+              a.blog__img(href="") 
+                .blog__type 
+                  span.article Article
+                img(src="../img/blog/blog3.jpg" alt="")
+              .blog__info 
+                .blog__subject Design
+                span | 
+                .blog__date August 8, 2020
+                span | 
+                .blog__time  15 min
+
+              .blog__title Should you choose a creative profession if you are attracted to creativity?
+              .blog__txt Curabitur nisl tincidunt eros venenatis vestibulum ac placerat. Tortor, viverra sed vulputate ultrices...
+              a.blog__link(href="") Read 
+            .event__item
+              .grid__element
+              a.blog__img(href="") 
+                .blog__type 
+                  span.article Article
+                img(src="../img/blog/blog3.jpg" alt="")
+              .blog__info 
+                .blog__subject Design
+                span | 
+                .blog__date August 8, 2020
+                span | 
+                .blog__time  15 min
+
+              .blog__title Should you choose a creative profession if you are attracted to creativity?
+              .blog__txt Curabitur nisl tincidunt eros venenatis vestibulum ac placerat. Tortor, viverra sed vulputate ultrices...
+              a.blog__link(href="") Read 
+
+          .check-other__more 
+            .check-other__text Do you want more articles, podcasts and videos?
+            a.check-other__link.btn Go to blog
+
+    footer
+      include ../footer
+    include ../js  

@@ -22,12 +22,12 @@ html(lang='en')
                 label(for="themes") Event category
                 .select-wrapper
                   select#themes(name="category") 
-                    option(value="all events") All events
-                    option(value="master-class") Online master-class
-                    option(value="lecture") Online lecture
-                    option(value="workshop") Online workshop
+                    option(value="All events") All events
+                    option(value="Online master-class") Online master-class
+                    option(value="Online lecture") Online lecture
+                    option(value="Online workshop") Online workshop
               .our-events__select 
-                label(for="themes1") Sort by
+                label(for="themes1") Sort by 
                 .select-wrapper
                   select#themes1(name="category") 
                     option(value="all events") All events
@@ -43,7 +43,7 @@ html(lang='en')
               .our-events__select  
                 span events per page
               .search 
-                input(type="text" placeholder='Search course...')
+                input(type="text" id='searchEvent' placeholder='Search course...')
                 svg(xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewbox='0 0 16 16' fill='none')
                   g(clip-path='url(#clip0_32160_786)')
                     path(fill-rule='evenodd' clip-rule='evenodd' d='M7.25016 2.16634C4.44272 2.16634 2.16683 4.44223 2.16683 7.24967C2.16683 10.0571 4.44272 12.333 7.25016 12.333C8.65276 12.333 9.92161 11.7658 10.842 10.8467C11.7642 9.92589 12.3335 8.6549 12.3335 7.24967C12.3335 4.44223 10.0576 2.16634 7.25016 2.16634ZM0.833496 7.24967C0.833496 3.70585 3.70634 0.833008 7.25016 0.833008C10.794 0.833008 13.6668 3.70585 13.6668 7.24967C13.6668 8.78248 13.1287 10.1905 12.2321 11.2939L14.9711 14.0278C15.2317 14.2879 15.2321 14.7101 14.972 14.9706C14.7119 15.2312 14.2898 15.2316 14.0292 14.9715L11.2888 12.2362C10.1863 13.13 8.78039 13.6663 7.25016 13.6663C3.70634 13.6663 0.833496 10.7935 0.833496 7.24967Z' fill='#9A9CA5')
@@ -78,8 +78,8 @@ html(lang='en')
                 .event__month July 
                 .event__time 11:00 &ndash; 12:30
               .event__info
-                .event__title Building a customer service department. Best Practices.
-                .event__subtitle Onine lecture
+                a.event__title(href='./singleEvent.html')  Building a customer service department. Best Practices.
+                .event__subtitle Online lecture
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -89,10 +89,10 @@ html(lang='en')
                 .event__month July 
                 .event__time 10:00 &ndash; 13:00
               .event__info
-                .event__title
+                a.event__title(href='./singleEvent.html') 
                   | How to apply methods of speculative design in practice.
                   | Worldbuilding prototyping.
-                .event__subtitle Onine workshop
+                .event__subtitle Online workshop
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -101,10 +101,10 @@ html(lang='en')
                 .event__month August 
                 .event__time 11:00 &ndash; 14:00
               .event__info
-                .event__title
+                a.event__title(href='./singleEvent.html') 
                   | Formation of the organizational structure of the company in the
                   | face of uncertainty.
-                .event__subtitle Onine master-class
+                .event__subtitle Online master-class
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -113,8 +113,8 @@ html(lang='en')
                 .event__month July 
                 .event__time 11:00 &ndash; 12:30
               .event__info
-                .event__title Building a customer service department. Best Practices.
-                .event__subtitle Onine lecture
+                a.event__title(href='./singleEvent.html')  Building a customer service department. Best Practices.
+                .event__subtitle Online lecture
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -123,10 +123,45 @@ html(lang='en')
                 .event__month July 
                 .event__time 10:00 &ndash; 13:00
               .event__info
-                .event__title
+                a.event__title(href='./singleEvent.html') 
                   | How to apply methods of speculative design in practice.
                   | Worldbuilding prototyping.
-                .event__subtitle Onine workshop
+                .event__subtitle Online workshop
+              a.header__link(href='./singleEvent.html') 
+                span View more 
+
+            .event__item
+              .event__number 05 
+              .event__date
+                .event__month August 
+                .event__time 11:00 &ndash; 14:00
+              .event__info
+                a.event__title(href='./singleEvent.html') 
+                  | Formation of the organizational structure of the company in the
+                  | face of uncertainty.
+                .event__subtitle Online master-class
+              a.header__link(href='./singleEvent.html') 
+                span View more 
+            .event__item
+              .event__number 24 
+              .event__date
+                .event__month July 
+                .event__time 11:00 &ndash; 12:30
+              .event__info
+                a.event__title(href='./singleEvent.html')  Building a customer service department. Best Practices.
+                .event__subtitle Online lecture
+              a.header__link(href='./singleEvent.html') 
+                span View more 
+            .event__item
+              .event__number 16 
+              .event__date
+                .event__month July 
+                .event__time 10:00 &ndash; 13:00
+              .event__info
+                a.event__title(href='./singleEvent.html') 
+                  | How to apply methods of speculative design in practice.
+                  | Worldbuilding prototyping.
+                .event__subtitle Online workshop
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -135,10 +170,10 @@ html(lang='en')
                 .event__month August 
                 .event__time 11:00 &ndash; 14:00
               .event__info
-                .event__title
+                a.event__title(href='./singleEvent.html') 
                   | Formation of the organizational structure of the company in the
                   | face of uncertainty.
-                .event__subtitle Onine master-class
+                .event__subtitle Online master-class
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -147,8 +182,8 @@ html(lang='en')
                 .event__month July 
                 .event__time 11:00 &ndash; 12:30
               .event__info
-                .event__title Building a customer service department. Best Practices.
-                .event__subtitle Onine lecture
+                a.event__title(href='./singleEvent.html')  Building a customer service department. Best Practices.
+                .event__subtitle Online lecture
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -157,10 +192,10 @@ html(lang='en')
                 .event__month July 
                 .event__time 10:00 &ndash; 13:00
               .event__info
-                .event__title
+                a.event__title(href='./singleEvent.html') 
                   | How to apply methods of speculative design in practice.
                   | Worldbuilding prototyping.
-                .event__subtitle Onine workshop
+                .event__subtitle Online workshop
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -169,10 +204,10 @@ html(lang='en')
                 .event__month August 
                 .event__time 11:00 &ndash; 14:00
               .event__info
-                .event__title
+                a.event__title(href='./singleEvent.html') 
                   | Formation of the organizational structure of the company in the
                   | face of uncertainty.
-                .event__subtitle Onine master-class
+                .event__subtitle Online master-class
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -181,8 +216,8 @@ html(lang='en')
                 .event__month July 
                 .event__time 11:00 &ndash; 12:30
               .event__info
-                .event__title Building a customer service department. Best Practices.
-                .event__subtitle Onine lecture
+                a.event__title(href='./singleEvent.html')  Building a customer service department. Best Practices.
+                .event__subtitle Online lecture
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -191,10 +226,10 @@ html(lang='en')
                 .event__month July 
                 .event__time 10:00 &ndash; 13:00
               .event__info
-                .event__title
+                a.event__title(href='./singleEvent.html') 
                   | How to apply methods of speculative design in practice.
                   | Worldbuilding prototyping.
-                .event__subtitle Onine workshop
+                .event__subtitle Online workshop
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -203,10 +238,10 @@ html(lang='en')
                 .event__month August 
                 .event__time 11:00 &ndash; 14:00
               .event__info
-                .event__title
+                a.event__title(href='./singleEvent.html') 
                   | Formation of the organizational structure of the company in the
                   | face of uncertainty.
-                .event__subtitle Onine master-class
+                .event__subtitle Online master-class
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -215,8 +250,8 @@ html(lang='en')
                 .event__month July 
                 .event__time 11:00 &ndash; 12:30
               .event__info
-                .event__title Building a customer service department. Best Practices.
-                .event__subtitle Onine lecture
+                a.event__title(href='./singleEvent.html')  Building a customer service department. Best Practices.
+                .event__subtitle Online lecture
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -225,10 +260,10 @@ html(lang='en')
                 .event__month July 
                 .event__time 10:00 &ndash; 13:00
               .event__info
-                .event__title
+                a.event__title(href='./singleEvent.html') 
                   | How to apply methods of speculative design in practice.
                   | Worldbuilding prototyping.
-                .event__subtitle Onine workshop
+                .event__subtitle Online workshop
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -237,10 +272,10 @@ html(lang='en')
                 .event__month August 
                 .event__time 11:00 &ndash; 14:00
               .event__info
-                .event__title
+                a.event__title(href='./singleEvent.html') 
                   | Formation of the organizational structure of the company in the
                   | face of uncertainty.
-                .event__subtitle Onine master-class
+                .event__subtitle Online master-class
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -249,8 +284,8 @@ html(lang='en')
                 .event__month July 
                 .event__time 11:00 &ndash; 12:30
               .event__info
-                .event__title Building a customer service department. Best Practices.
-                .event__subtitle Onine lecture
+                a.event__title(href='./singleEvent.html')  Building a customer service department. Best Practices.
+                .event__subtitle Online lecture
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -259,10 +294,10 @@ html(lang='en')
                 .event__month July 
                 .event__time 10:00 &ndash; 13:00
               .event__info
-                .event__title
+                a.event__title(href='./singleEvent.html') 
                   | How to apply methods of speculative design in practice.
                   | Worldbuilding prototyping.
-                .event__subtitle Onine workshop
+                .event__subtitle Online workshop
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -271,10 +306,10 @@ html(lang='en')
                 .event__month August 
                 .event__time 11:00 &ndash; 14:00
               .event__info
-                .event__title
+                a.event__title(href='./singleEvent.html') 
                   | Formation of the organizational structure of the company in the
                   | face of uncertainty.
-                .event__subtitle Onine master-class
+                .event__subtitle Online master-class
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -283,8 +318,8 @@ html(lang='en')
                 .event__month July 
                 .event__time 11:00 &ndash; 12:30
               .event__info
-                .event__title Building a customer service department. Best Practices.
-                .event__subtitle Onine lecture
+                a.event__title(href='./singleEvent.html')  Building a customer service department. Best Practices.
+                .event__subtitle Online lecture
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -293,10 +328,10 @@ html(lang='en')
                 .event__month July 
                 .event__time 10:00 &ndash; 13:00
               .event__info
-                .event__title
+                a.event__title(href='./singleEvent.html') 
                   | How to apply methods of speculative design in practice.
                   | Worldbuilding prototyping.
-                .event__subtitle Onine workshop
+                .event__subtitle Online workshop
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -305,10 +340,10 @@ html(lang='en')
                 .event__month August 
                 .event__time 11:00 &ndash; 14:00
               .event__info
-                .event__title
+                a.event__title(href='./singleEvent.html') 
                   | Formation of the organizational structure of the company in the
                   | face of uncertainty.
-                .event__subtitle Onine master-class
+                .event__subtitle Online master-class
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -317,8 +352,8 @@ html(lang='en')
                 .event__month July 
                 .event__time 11:00 &ndash; 12:30
               .event__info
-                .event__title Building a customer service department. Best Practices.
-                .event__subtitle Onine lecture
+                a.event__title(href='./singleEvent.html')  Building a customer service department. Best Practices.
+                .event__subtitle Online lecture
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -327,10 +362,10 @@ html(lang='en')
                 .event__month July 
                 .event__time 10:00 &ndash; 13:00
               .event__info
-                .event__title
+                a.event__title(href='./singleEvent.html') 
                   | How to apply methods of speculative design in practice.
                   | Worldbuilding prototyping.
-                .event__subtitle Onine workshop
+                .event__subtitle Online workshop
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -339,10 +374,10 @@ html(lang='en')
                 .event__month August 
                 .event__time 11:00 &ndash; 14:00
               .event__info
-                .event__title
+                a.event__title(href='./singleEvent.html') 
                   | Formation of the organizational structure of the company in the
                   | face of uncertainty.
-                .event__subtitle Onine master-class
+                .event__subtitle Online master-class
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -351,8 +386,8 @@ html(lang='en')
                 .event__month July 
                 .event__time 11:00 &ndash; 12:30
               .event__info
-                .event__title Building a customer service department. Best Practices.
-                .event__subtitle Onine lecture
+                a.event__title(href='./singleEvent.html')  Building a customer service department. Best Practices.
+                .event__subtitle Online lecture
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -361,10 +396,10 @@ html(lang='en')
                 .event__month July 
                 .event__time 10:00 &ndash; 13:00
               .event__info
-                .event__title
+                a.event__title(href='./singleEvent.html') 
                   | How to apply methods of speculative design in practice.
                   | Worldbuilding prototyping.
-                .event__subtitle Onine workshop
+                .event__subtitle Online workshop
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -373,10 +408,10 @@ html(lang='en')
                 .event__month August 
                 .event__time 11:00 &ndash; 14:00
               .event__info
-                .event__title
+                a.event__title(href='./singleEvent.html') 
                   | Formation of the organizational structure of the company in the
                   | face of uncertainty.
-                .event__subtitle Onine master-class
+                .event__subtitle Online master-class
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -385,8 +420,8 @@ html(lang='en')
                 .event__month July 
                 .event__time 11:00 &ndash; 12:30
               .event__info
-                .event__title Building a customer service department. Best Practices.
-                .event__subtitle Onine lecture
+                a.event__title(href='./singleEvent.html')  Building a customer service department. Best Practices.
+                .event__subtitle Online lecture
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -395,10 +430,10 @@ html(lang='en')
                 .event__month July 
                 .event__time 10:00 &ndash; 13:00
               .event__info
-                .event__title
+                a.event__title(href='./singleEvent.html') 
                   | How to apply methods of speculative design in practice.
                   | Worldbuilding prototyping.
-                .event__subtitle Onine workshop
+                .event__subtitle Online workshop
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -407,10 +442,10 @@ html(lang='en')
                 .event__month August 
                 .event__time 11:00 &ndash; 14:00
               .event__info
-                .event__title
+                a.event__title(href='./singleEvent.html') 
                   | Formation of the organizational structure of the company in the
                   | face of uncertainty.
-                .event__subtitle Onine master-class
+                .event__subtitle Online master-class
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -419,8 +454,8 @@ html(lang='en')
                 .event__month July 
                 .event__time 11:00 &ndash; 12:30
               .event__info
-                .event__title Building a customer service department. Best Practices.
-                .event__subtitle Onine lecture
+                a.event__title(href='./singleEvent.html')  Building a customer service department. Best Practices.
+                .event__subtitle Online lecture
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -429,10 +464,10 @@ html(lang='en')
                 .event__month July 
                 .event__time 10:00 &ndash; 13:00
               .event__info
-                .event__title
+                a.event__title(href='./singleEvent.html') 
                   | How to apply methods of speculative design in practice.
                   | Worldbuilding prototyping.
-                .event__subtitle Onine workshop
+                .event__subtitle Online workshop
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -441,10 +476,10 @@ html(lang='en')
                 .event__month August 
                 .event__time 11:00 &ndash; 14:00
               .event__info
-                .event__title
+                a.event__title(href='./singleEvent.html') 
                   | Formation of the organizational structure of the company in the
                   | face of uncertainty.
-                .event__subtitle Onine master-class
+                .event__subtitle Online master-class
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -453,8 +488,8 @@ html(lang='en')
                 .event__month July 
                 .event__time 11:00 &ndash; 12:30
               .event__info
-                .event__title Building a customer service department. Best Practices.
-                .event__subtitle Onine lecture
+                a.event__title(href='./singleEvent.html')  Building a customer service department. Best Practices.
+                .event__subtitle Online lecture
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -463,10 +498,10 @@ html(lang='en')
                 .event__month July 
                 .event__time 10:00 &ndash; 13:00
               .event__info
-                .event__title
+                a.event__title(href='./singleEvent.html') 
                   | How to apply methods of speculative design in practice.
                   | Worldbuilding prototyping.
-                .event__subtitle Onine workshop
+                .event__subtitle Online workshop
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -475,10 +510,10 @@ html(lang='en')
                 .event__month August 
                 .event__time 11:00 &ndash; 14:00
               .event__info
-                .event__title
+                a.event__title(href='./singleEvent.html') 
                   | Formation of the organizational structure of the company in the
                   | face of uncertainty.
-                .event__subtitle Onine master-class
+                .event__subtitle Online master-class
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -487,8 +522,8 @@ html(lang='en')
                 .event__month July 
                 .event__time 11:00 &ndash; 12:30
               .event__info
-                .event__title Building a customer service department. Best Practices.
-                .event__subtitle Onine lecture
+                a.event__title(href='./singleEvent.html')  Building a customer service department. Best Practices.
+                .event__subtitle Online lecture
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -497,10 +532,10 @@ html(lang='en')
                 .event__month July 
                 .event__time 10:00 &ndash; 13:00
               .event__info
-                .event__title
+                a.event__title(href='./singleEvent.html') 
                   | How to apply methods of speculative design in practice.
                   | Worldbuilding prototyping.
-                .event__subtitle Onine workshop
+                .event__subtitle Online workshop
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -509,10 +544,10 @@ html(lang='en')
                 .event__month August 
                 .event__time 11:00 &ndash; 14:00
               .event__info
-                .event__title
+                a.event__title(href='./singleEvent.html') 
                   | Formation of the organizational structure of the company in the
                   | face of uncertainty.
-                .event__subtitle Onine master-class
+                .event__subtitle Online master-class
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -521,8 +556,8 @@ html(lang='en')
                 .event__month July 
                 .event__time 11:00 &ndash; 12:30
               .event__info
-                .event__title Building a customer service department. Best Practices.
-                .event__subtitle Onine lecture
+                a.event__title(href='./singleEvent.html')  Building a customer service department. Best Practices.
+                .event__subtitle Online lecture
               a.header__link(href='./singleEvent.html') 
                 span View more 
             .event__item
@@ -531,44 +566,10 @@ html(lang='en')
                 .event__month July 
                 .event__time 10:00 &ndash; 13:00
               .event__info
-                .event__title
+                a.event__title(href='./singleEvent.html') 
                   | How to apply methods of speculative design in practice.
                   | Worldbuilding prototyping.
-                .event__subtitle Onine workshop
-              a.header__link(href='./singleEvent.html') 
-                span View more 
-            .event__item
-              .event__number 05 
-              .event__date
-                .event__month August 
-                .event__time 11:00 &ndash; 14:00
-              .event__info
-                .event__title
-                  | Formation of the organizational structure of the company in the
-                  | face of uncertainty.
-                .event__subtitle Onine master-class
-              a.header__link(href='./singleEvent.html') 
-                span View more 
-            .event__item
-              .event__number 24 
-              .event__date
-                .event__month July 
-                .event__time 11:00 &ndash; 12:30
-              .event__info
-                .event__title Building a customer service department. Best Practices.
-                .event__subtitle Onine lecture
-              a.header__link(href='./singleEvent.html') 
-                span View more 
-            .event__item
-              .event__number 16 
-              .event__date
-                .event__month July 
-                .event__time 10:00 &ndash; 13:00
-              .event__info
-                .event__title
-                  | How to apply methods of speculative design in practice.
-                  | Worldbuilding prototyping.
-                .event__subtitle Onine workshop
+                .event__subtitle Online workshop
               a.header__link(href='./singleEvent.html') 
                 span View more  
 

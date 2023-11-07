@@ -1,0 +1,99 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    include ../styles
+
+    title About us
+    a.courses__grid.three(href='about-ceatex__link.btn')
+  body
+    header
+      .header__wrapper   
+        include ../header
+        .container
+    main  
+      section.about-us
+        .container 
+
+          .text-img
+            .about-ceatex__img
+              img(src='../img/aboutUs/createxSchool.jpg' alt='img')
+            .about-ceatex__info
+              h3.about-ceatex__subtitle.subtitle About us
+              h2.about-ceatex__title.title Createx Online School
+
+              .about-us__subtitle Createx Online School is a leader in online studying. We have lots of courses and programs from the main market experts.
+              .about-ceatex__el We provide relevant approaches to online learning, internships and employment in the largest companies in the country. Our educational programs help you get a new specialty from scratch. During your studies, we will help you find a job. Check the courses and online events that we organise.
+              .header__links
+                a.header__link(href='')
+                  span  Explore events
+                a.about-ceatex__link.btn(href='') Browse courses
+      section.showreel
+        .container
+          a.videtube.tube(href='https://www.youtube.com/watch?v=WCoASzvS1WU') 
+            .video__tube 
+              svg(xmlns='http://www.w3.org/2000/svg' width='52' height='52' viewbox='0 0 52 52' fill='none')
+                circle(cx='25.9995' cy='26' r='26' fill='#FF3F3A')
+                path(d='M32.4995 25.134C33.1662 25.5189 33.1662 26.4811 32.4995 26.866L23.4995 32.0622C22.8328 32.4471 21.9995 31.966 21.9995 31.1962L21.9995 20.8038C21.9995 20.034 22.8328 19.5529 23.4995 19.9378L32.4995 25.134Z' fill='white')
+            | Watch Video
+
+          h2.showreel__title
+          .text-img 
+            .showreel__img  
+              img(src="../img/aboutUs/video.jpg" alt="")
+            dl.header__numbers
+              .dl__wrapper
+                dt.header__number 1200
+                dd.number__info Students graduated
+                dt
+                dd
+              .dl__wrapper
+                dt.header__number 84
+                dd.number__info Completed courses
+                dt
+                dd
+              .dl__wrapper
+                dt.header__number 16
+                dd.number__info Qualified tutors
+                dt
+                dd
+              .dl__wrapper
+                dt.header__number 5
+                dd.number__info Years of experience
+      section.stand-for
+        .container 
+          h3.stand-for__subtitle We always stand for
+
+          h2.stand-for__title Our core values
+          .stand-for__flex  
+            .stand-for__item 
+              .stand-for__img 
+                img(src="../img/aboutUs/flex_el.png" alt="")
+              .stand-for__name Structured Approach
+              .stand-for__descr Aenean urna dictum adipiscing nec, cras quisque. Nunc in mauris. 
+            .stand-for__divider
+            .stand-for__item 
+              .stand-for__img 
+                img(src="../img/aboutUs/flex_el.png" alt="")
+              .stand-for__name Structured Approach
+              .stand-for__descr Aenean urna dictum adipiscing nec, cras quisque. Nunc in mauris. 
+            .stand-for__divider
+            .stand-for__item 
+              .stand-for__img 
+                img(src="../img/aboutUs/flex_el.png" alt="")
+              .stand-for__name Structured Approach
+              .stand-for__descr Aenean urna dictum adipiscing nec, cras quisque. Nunc in mauris. 
+
+            .stand-for__divider
+            .stand-for__item 
+              .stand-for__img 
+                img(src="../img/aboutUs/flex_el.png" alt="")
+              .stand-for__name Structured Approach
+              .stand-for__descr Aenean urna dictum adipiscing nec, cras quisque. Nunc in mauris. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur quis iusto culpa maxime laudantium deserunt nobis labore quae voluptate officiis. Officiis perspiciatis commodi fugit aliquam optio veniam officia quos illum?
+      include ../sliderComments
+
+      include ../subscribe
+    footer
+      include ../footer
+    include ../js  
