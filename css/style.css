@@ -656,6 +656,8 @@ a.naviagtion__link.open__page {
     margin-bottom: 60px;
 }
 
+
+
 .courses__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -991,6 +993,7 @@ button.tabs__btn span {
     position: relative;
     border-radius: 4px;
     padding-top: 340px;
+    background-position: center;
 
     background-repeat: no-repeat;
     background-size: cover;
@@ -1283,7 +1286,7 @@ a.tutor__link svg {
 }
 
 .blog {
-    padding: 120px 0px 180px;
+    padding: 80px 0px 100px;
 }
 
 .blog__subtitle {
@@ -1767,7 +1770,9 @@ a.footer__link:hover svg path {
 .courses__grid.three {
     grid-template-columns: 1fr 1fr 1fr;
     /* grid-template-rows: 438px 438px; */
-    grid-template-rows: repeat(auto-fit, minmax(0px, 431px));
+    /* grid-template-rows: repeat(auto-fit, minmax(0px, 431px)); */
+    grid-template-rows: auto;
+
 }
 
 
@@ -3603,12 +3608,178 @@ h2.showreel__title+.text-img {
     flex-basis: 240px;
     flex-grow: 0;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     text-align: center;
 }
 
+.stand-for {
+    margin-bottom: 180px;
+}
+
 .stand-for__divider {
     width: 1px;
-    min-height: 80%;
+    height: 150px;
     background: linear-gradient(270deg, rgba(218, 219, 221, 0.00) 0%, rgba(218, 219, 221, 0.50) 12.33%, #DADBDD 51.91%, rgba(218, 219, 221, 0.50) 87.85%, rgba(218, 219, 221, 0.00) 100%);
+}
+
+.courses__grid.three.directions .courses__element {
+    display: block;
+}
+
+.stand-for__subtitle,
+.stand-for__title {
+    text-align: center;
+
+}
+
+.stand-for__name {
+    margin-bottom: 8px;
+}
+
+.stand-for__descr {
+    color: #787A80;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.stand-for__img {
+    margin-bottom: 24px;
+}
+
+.stand-for__title {
+    margin-bottom: 60px;
+}
+
+.directions .courses__about {
+    margin-bottom: 20px;
+}
+
+.directions .courses__title {
+    position: relative;
+    margin-bottom: 0;
+}
+
+.studing,
+.directions {
+    margin-bottom: 180px;
+}
+
+.studing__title {
+    /* margin-bottom: 60px; */
+}
+
+.directions .courses__title::before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: -1px;
+    right: -34px;
+    background-image: url(../img/aboutUs/right.svg);
+
+}
+
+.studing__steps {}
+
+.studing__step {
+    display: flex;
+    gap: 15px;
+    position: relative;
+}
+
+.step__decor {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: #FF3F3A;
+    left: -18px;
+    top: 32px;
+    z-index: 10;
+}
+
+.studing__img img {
+    max-height: 520px;
+}
+
+.step__info {}
+
+.step__info {
+    display: flex;
+    max-width: 446px;
+    flex-direction: column;
+    margin-top: 32px;
+    justify-content: center;
+    position: relative;
+}
+
+.studing .text-img {
+    align-items: flex-end;
+}
+
+.step__info::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    bottom: -25px;
+    top: 0;
+    width: 1px;
+    opacity: 0.5;
+    background: #9A9CA5;
+}
+
+.studing__step:last-child .step__info::before {
+    bottom: -10px;
+}
+
+.step__number {
+    color: #787A80;
+    font-size: 12px;
+    font-weight: 900;
+    margin-bottom: 2px;
+}
+
+.step__title {
+    color: #1E212C;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.step__text {
+    color: #787A80;
+
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.courses__grid.four {
+    grid-gap: 60px 30px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.ourTeam {
+    margin-bottom: 120px;
+}
+
+li a.job svg {
+    fill: black;
+    transition: fill linear 0.3s;
+}
+
+li a.job:hover svg {
+    fill: red;
+    transition: fill linear 0.3s;
+}
+
+.work {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.work li {
+    padding: 28px 18px;
 }
